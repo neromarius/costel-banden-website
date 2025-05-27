@@ -1,11 +1,6 @@
-<svg width="64" height="64" viewBox="0 0 192 115" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <g>
-    <path d="M26,26 Q13,58 96,108 Q179,58 166,26 Q96,-13 26,26 Z" fill="#fff" stroke="#0057B7" stroke-width="14"/>
-    <path d="M32,32 Q19,58 96,102 Q173,58 160,32 Q96,6 32,32 Z" fill="none" stroke="#FFD700" stroke-width="10"/>
-    <path d="M38,38 Q25,58 96,96 Q167,58 154,38 Q96,25 38,38 Z" fill="none" stroke="#EF3340" stroke-width="10"/>
-    <circle cx="96" cy="91" r="22" fill="#222" stroke="#FFD700" stroke-width="8"/>
-    <circle cx="96" cy="91" r="10" fill="#fff" />
-    <text x="56" y="68" font-family="Montserrat, Arial, sans-serif" font-size="44" font-weight="bold" fill="#0057B7">C</text>
-    <text x="104" y="68" font-family="Montserrat, Arial, sans-serif" font-size="44" font-weight="bold" fill="#EF3340">B</text>
-  </g>
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Simplified CB favicon version -->
+  <rect width="32" height="32" rx="4" fill="#0057B7"/>
+  <text x="6" y="22" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#fff">C</text>
+  <text x="18" y="22" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#FFD700">B</text>
 </svg>
