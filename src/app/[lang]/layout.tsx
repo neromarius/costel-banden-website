@@ -6,7 +6,10 @@ import UmamiScript from '../../components/UmamiScript';
 import { loadLocale } from '../../utils/i18n';
 import Head from 'next/head';
 
-export default async function LangLayout(props: { children: React.ReactNode; params: { lang: string }; }) {
+export default async function LangLayout(props: { 
+  children: React.ReactNode; 
+  params: Promise<{ lang: string }>; 
+}) {
   const { children } = props;
   const params = await props.params;
   let lang = typeof params?.lang === 'string' ? params.lang : 'ro';
