@@ -11,9 +11,15 @@ const navLabels: Record<string, string> = {
 export default function Servicii() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen pt-8 pb-24 px-2 bg-gradient-to-br from-blue-100 via-white to-blue-200">
-      {/* <div className="w-full max-w-3xl">
-        <Navbar t={(key) => navLabels[key] || key} />
-      </div> */}
+      <div className="w-full max-w-3xl">
+        <Navbar 
+          home="Acasă"
+          services="Servicii"
+          appointments="Programări"
+          contact="Contact"
+          admin="Admin"
+        />
+      </div>
       <section className="flex flex-col items-center gap-6 mt-16 w-full">
         <h1 className="text-2xl md:text-4xl font-extrabold text-blue-800 text-center mb-4 animate-bounce">Servicii vulcanizare mobilă și schimb anvelope</h1>
         <h2 className="text-lg md:text-2xl font-bold text-blue-700 text-center mb-2">Intervenții rapide la domiciliu în Roeselare și West Flanders</h2>
