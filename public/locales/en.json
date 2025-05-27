@@ -33,6 +33,11 @@
         "price": "From 60 EURO"
       },
       {
+        "title": "Puncture repair",
+        "desc": "Professional tire puncture repair, special patch application, leak testing and sealing.",
+        "price": "From 25 EURO"
+      },
+      {
         "title": "Tire balancing",
         "desc": "Balancing and wheel check.",
         "price": "From 30 EURO"

@@ -32,6 +32,11 @@
         "price": "À partir de 60 EUROS"
       },
       {
+        "title": "Réparation crevaison",
+        "desc": "Réparation professionnelle des crevaisons, application de rustines spéciales, test d'étanchéité.",
+        "price": "À partir de 25 EUROS"
+      },
+      {
         "title": "Équilibrage des pneus",
         "desc": "Équilibrage et vérification des roues.",
         "price": "À partir de 30 EUROS"
