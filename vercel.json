@@ -1,9 +1,14 @@
 {
   "redirects": [
     {
-      "source": "/(.*)",
-      "destination": "https://www.costelbanden.be/$1",
-      "has": [{ "host": "costelbanden.be" }],
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "costelbanden.be"
+        }
+      ],
+      "destination": "https://www.costelbanden.be/:path*",
       "permanent": true
     }
   ]
