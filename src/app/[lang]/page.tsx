@@ -25,7 +25,7 @@ export default function HomePage() {
   type NavbarT = { home?: string; services?: string; appointments?: string; contact?: string; admin?: string };
   const homepage: HomepageT = typeof t?.homepage === 'object' ? t.homepage : {};
   const navbar: NavbarT = typeof t?.navbar === 'object' ? t.navbar : {};
-  const keywords = homepage.seo_keywords || "mobile tyre service, tyre change, tyre repair, tyres, Roeselare, emergency tyre, car tyres, tyre shop, tyre replacement, tyre assistance, tyre breakdown, tyre service, flat tyre, puncture repair, mobile tyre fitting, tyre garage, tyre specialist, tyre support, roadside tyre, banden, vulcanizare, anvelopa, cauciuc, Belgium, West Flanders, best tyre service, cheap tyres, quick tyre, fast tyre, professional tyre service, local tyre service";
+  // const keywords = homepage.seo_keywords || "mobile tyre service, tyre change, tyre repair, tyres, Roeselare, emergency tyre, car tyres, tyre shop, tyre replacement, tyre assistance, tyre breakdown, tyre service, flat tyre, puncture repair, mobile tyre fitting, tyre garage, tyre specialist, tyre support, roadside tyre, banden, vulcanizare, anvelopa, cauciuc, Belgium, West Flanders, best tyre service, cheap tyres, quick tyre, fast tyre, professional tyre service, local tyre service";
 
   return (
     <>

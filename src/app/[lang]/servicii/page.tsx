@@ -8,12 +8,12 @@ import { detectLocale, loadLocale, Locale } from "../../../utils/i18n";
 
 export default function Servicii() {
   const params = useParams();
-  const [locale, setLocale] = useState<Locale>('ro');
-  const [t, setT] = useState<Record<string, any>>(null);
+  // const locale = unused variable
+  const [t, setT] = useState<Record<string, unknown>>(null);
 
   useEffect(() => {
     const lang = typeof params.lang === 'string' ? params.lang : detectLocale();
-    setLocale(lang);
+    // setLocale(lang); - removed unused
     loadLocale(lang).then(setT);
   }, [params.lang]);
 
