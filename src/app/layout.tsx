@@ -19,6 +19,15 @@ export const metadata: Metadata = {
   title: "Vulcanizare mobilă Roeselare | Service anvelope | Costel Banden",
   description: "Service mobil anvelope, schimb cauciucuri, intervenții rapide la domiciliu în Roeselare și West Flanders. Programează online sau pe WhatsApp. Prețuri transparente, intervenții non-stop.",
   keywords: "vulcanizare mobilă, schimb anvelope, service cauciucuri, Roeselare, dépannage pneus, bandenservice, tyre service, rapid, programare online, WhatsApp, West Flanders, mobile tyre fitting, cheap tyres, quick tyre, local tyre service, professional tyre service, echilibrare roți, anvelope iarnă/vară, service auto mobil, urgent tyre change",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-16.svg", sizes: "16x16", type: "image/svg+xml" }
+    ],
+    apple: "/favicon.svg",
+    shortcut: "/favicon.svg"
+  },
   openGraph: {
     title: "Vulcanizare mobilă Roeselare | Service anvelope | Costel Banden",
     description: "Service mobil anvelope, schimb cauciucuri, intervenții rapide la domiciliu în Roeselare și West Flanders. Programează online sau pe WhatsApp. Prețuri transparente, intervenții non-stop.",
@@ -74,7 +83,10 @@ export default function RootLayout({
         {/* <link rel="preload" href="/fonts/geist.woff2" as="font" type="font/woff2" crossOrigin="anonymous" /> */}
         <link rel="preload" href="/favicon.svg" as="image" type="image/svg+xml" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.svg" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.svg" />
         <link rel="alternate icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/favicon.svg" />
         <meta name="keywords" content="vulcanizare mobilă, schimb anvelope, service cauciucuri, Roeselare, dépannage pneus, bandenservice, tyre service, rapid, programare online, WhatsApp, West Flanders, mobile tyre fitting, cheap tyres, quick tyre, local tyre service, professional tyre service, echilibrare roți, anvelope iarnă/vară, service auto mobil, urgent tyre change" />
         <meta property="og:title" content="Vulcanizare mobilă Roeselare | Service anvelope | Costel Banden" />
         <meta property="og:description" content="Service mobil anvelope, schimb cauciucuri, intervenții rapide la domiciliu în Roeselare și West Flanders. Programează online sau pe WhatsApp. Prețuri transparente, intervenții non-stop." />
@@ -165,11 +177,11 @@ export default function RootLayout({
         <meta name="color-scheme" content="light dark" />
         <meta name="supported-color-schemes" content="light dark" />
         <meta name="msapplication-TileColor" content="#1e40af" />
-        <meta name="msapplication-TileImage" content="/logo-costelbanden.svg" />
+        <meta name="msapplication-TileImage" content="/favicon.svg" />
         <meta name="application-name" content="Costel Banden" />
         <meta name="apple-mobile-web-app-title" content="Costel Banden" />
-        <meta name="apple-touch-icon" content="/logo-costelbanden.svg" />
-        <meta name="apple-touch-startup-image" content="/logo-costelbanden.svg" />
+        <meta name="apple-touch-icon" content="/favicon.svg" />
+        <meta name="apple-touch-startup-image" content="/favicon.svg" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-br from-blue-100 via-white to-blue-200 min-h-screen`}
