@@ -3,7 +3,7 @@
     {
       "source": "/(.*)",
       "destination": "https://www.costelbanden.be/$1",
-      "has": [{ "type": "host", "value": "costelbanden.be" }],
+      "has": [{ "host": "costelbanden.be" }],
       "permanent": true
     }
   ]
