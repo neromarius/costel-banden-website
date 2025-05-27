@@ -1,0 +1,98 @@
+{
+  "navbar": {
+    "home": "Accueil",
+    "services": "Services",
+    "appointments": "Rendez-vous",
+    "contact": "Contact",
+    "admin": "Admin"
+  },
+  "homepage": {
+    "title": "Costel Banden",
+    "subtitle": "Service mobile de pneus",
+    "desc": "Réparation, remplacement, équilibrage et rotation des pneus chez vous ou au bureau. Rapide, sûr et à des prix transparents!",
+    "seo_title": "Service de pneus mobile, pneus, Roeselare",
+    "seo_subtitle": "Service mobile de pneus, changement et réparation à Roeselare et environs.",
+    "seo_desc": "Besoin d'un changement ou d'une réparation de pneus ? Costel Banden propose un service rapide de pneus mobiles à Roeselare et dans un rayon de 30 km. Intervention à tout moment !"
+  },
+  "emergency": {
+    "text": "Service d'urgence disponible sur demande (dans la limite de 30 km de Roeselare)"
+  },
+  "services": {
+    "title": "Services",
+    "desc": "Tous nos services sont rapides, sûrs et à des prix transparents.",
+    "list": [
+      {
+        "title": "Vulcanisation des pneus",
+        "desc": "Montage, démontage, équilibrage des pneus pour voitures et utilitaires.",
+        "price": "À partir de 30 EUROS"
+      },
+      {
+        "title": "Changement de pneus",
+        "desc": "Changement pneus été/hiver, vérification pression, gonflage à l'azote.",
+        "price": "À partir de 60 EUROS"
+      },
+      {
+        "title": "Rotation des pneus",
+        "desc": "Rotation + équilibrage des pneus pour éviter l'usure inégale.",
+        "price": "À partir de 60 EUROS"
+      },
+      {
+        "title": "Équilibrage des pneus",
+        "desc": "Équilibrage et vérification des roues.",
+        "price": "À partir de 30 EUROS"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "desc": "Contactez-nous pour des rendez-vous ou des questions.",
+    "phone": "Téléphone",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "address": "Adresse", 
+    "schedule": "Horaires",
+    "facebook": "Facebook",
+    "loading": "Chargement des informations de contact..."
+  },
+  "admin": {
+    "title": "Admin",
+    "desc": "Panneau d'administration."
+  },
+  "gallery": {
+    "images": [
+      {
+        "url": "/uploads/image1.jpg",
+        "caption": "Rapidité et professionnalisme – service mobile de pneus directement chez vous!"
+      },
+      {
+        "url": "/uploads/image2.jpg",
+        "caption": "Interventions d'urgence pour votre sécurité sur la route."
+      },
+      {
+        "url": "/uploads/image3.jpg",
+        "caption": "Équipements modernes et personnel qualifié – nous changeons vos pneus où que vous soyez."
+      },
+      {
+        "url": "/uploads/image5.jpg",
+        "caption": "Costel Banden – votre partenaire de confiance pour toute situation imprévue."
+      },
+      {
+        "url": "/uploads/image7.jpg",
+        "caption": "Qu'il pleuve ou qu'il fasse beau, nous venons à vous partout en Belgique!"
+      },
+      {
+        "url": "/uploads/image8.jpg",
+        "caption": "Conseils et assistance gratuits pour l'entretien des pneus."
+      },
+      {
+        "url": "/uploads/image9.jpg",
+        "caption": "Réputation bâtie sur le sérieux et d'excellents résultats."
+      },
+      {
+        "url": "/uploads/Image.jpg",
+        "caption": "Entreprise locale au grand cœur – pour des trajets sans souci!"
+      }
+    ]
+  },
+  "fast_service": "Service rapide | Prise de rendez-vous en ligne ou via WhatsApp"
+}

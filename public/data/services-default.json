@@ -1,0 +1,16 @@
+[
+  {
+    "id": "srv_1",
+    "icon": "🛞",
+    "nume": "Vulcanizare roți",
+    "pret": "de la 50 lei",
+    "descriere": "Montaj, demontaj, echilibrare roți autoturisme și autoutilitare."
+  },
+  {
+    "id": "srv_2",
+    "icon": "🔧",
+    "nume": "Schimb anvelope",
+    "pret": "de la 80 lei",
+    "descriere": "Schimb anvelope vară/iarnă, verificare presiune, umflare cu azot."
+  }
+]

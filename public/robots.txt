@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Sitemap: https://costelbanden.be/sitemap.xml
+Host: https://costelbanden.be
+
+# Blochează folderele sensibile
+Disallow: /admin
+Disallow: /api
+
+# Crawl-delay pentru crawlere agresive
+Crawl-delay: 2

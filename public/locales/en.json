@@ -1,0 +1,103 @@
+{
+  "navbar": {
+    "home": "Home",
+    "services": "Services",
+    "appointments": "Appointments",
+    "contact": "Contact",
+    "admin": "Admin"
+  },
+  "homepage": {
+    "title": "Costel Banden",
+    "subtitle": "Mobile Tire Service",
+    "desc": "Repairs, replacement, balancing, and tire rotation at your home or office. Fast, safe, and transparent prices!",
+    "seo_title": "Mobile tyre service, tyres, Roeselare",
+    "seo_subtitle": "Mobile tyre, tyre change and repair service in Roeselare and surroundings.",
+    "seo_desc": "Need a tyre change or repair? Costel Banden offers fast mobile tyre service in Roeselare and within 30 km. We intervene anytime!",
+    "seo_keywords": "mobile tyre service, tyre change, tyre repair, tyre fitting, tyres, Roeselare, emergency tyre, car tyres, tyre shop, tyre replacement, tyre assistance, tyre breakdown, tyre service, flat tyre, puncture repair, mobile tyre fitting, tyre garage, tyre specialist, tyre support, roadside tyre, banden, vulcanizare, anvelopa, cauciuc, Belgium, West Flanders, best tyre service, cheap tyres, quick tyre, fast tyre, professional tyre service, local tyre service"
+  },
+  "emergency": {
+    "text": "Emergency service available on request (within 30 km of Roeselare)"
+  },
+  "services": {
+    "title": "Services",
+    "desc": "All our services are fast, safe, and transparently priced.",
+    "list": [
+      {
+        "title": "Tire vulcanization",
+        "desc": "Mounting, dismounting, balancing of tires for cars and vans.",
+        "price": "From 30 EURO"
+      },
+      {
+        "title": "Tire change",
+        "desc": "Summer/winter tire change, pressure check, nitrogen inflation.",
+        "price": "From 60 EURO"
+      },
+      {
+        "title": "Tire rotation",
+        "desc": "Rotation + balancing to avoid uneven wear.",
+        "price": "From 60 EURO"
+      },
+      {
+        "title": "Tire balancing",
+        "desc": "Balancing and wheel check.",
+        "price": "From 30 EURO"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "desc": "Contact us for appointments or questions.",
+    "phone": "Phone",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "address": "Address",
+    "schedule": "Schedule",
+    "facebook": "Facebook",
+    "loading": "Loading contact information..."
+  },
+  "admin": {
+    "title": "Admin",
+    "desc": "Admin panel."
+  },
+  "gallery": {
+    "images": [
+      {
+        "url": "/uploads/image1.jpg",
+        "caption": "Speed and professionalism – mobile tire service right at your door!"
+      },
+      {
+        "url": "/uploads/image2.jpg",
+        "caption": "Emergency interventions for your safety on the road."
+      },
+      {
+        "url": "/uploads/image3.jpg",
+        "caption": "Modern equipment and skilled staff – we change your tires wherever you need."
+      },
+      {
+        "url": "/uploads/image5.jpg",
+        "caption": "Choose premium services for your car – promptness, quality, transparency."
+      },
+      {
+        "url": "/uploads/image7.jpg",
+        "caption": "Costel Banden – your trusted partner for any unexpected situation."
+      },
+      {
+        "url": "/uploads/image8.jpg",
+        "caption": "Rain or shine, we reach you anywhere in Belgium!"
+      },
+      {
+        "url": "/uploads/image9.jpg",
+        "caption": "Free consultancy and advice for tire maintenance."
+      },
+      {
+        "url": "/uploads/image10.jpg",
+        "caption": "A reputation built on seriousness and excellent results."
+      },
+      {
+        "url": "/uploads/Image.jpg",
+        "caption": "Local business with a big heart – for worry-free journeys!"
+      }
+    ]
+  },
+  "fast_service": "Fast service | Online booking or WhatsApp"
+}

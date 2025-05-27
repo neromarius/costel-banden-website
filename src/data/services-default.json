@@ -1,0 +1,30 @@
+[
+  {
+    "id": "inlocuire",
+    "icon": "🔧",
+    "nume": "Înlocuire anvelope",
+    "descriere": "Schimbăm rapid și sigur anvelopele, la domiciliu sau la birou.",
+    "pret": "150 lei"
+  },
+  {
+    "id": "echilibrare",
+    "icon": "⚖️",
+    "nume": "Echilibrare anvelope",
+    "descriere": "Echilibrare profesională pentru rulare lină și sigură.",
+    "pret": "70 lei"
+  },
+  {
+    "id": "rotire",
+    "icon": "🔄",
+    "nume": "Rotire anvelope",
+    "descriere": "Rotim anvelopele pentru o uzură uniformă și durată de viață extinsă.",
+    "pret": "50 lei"
+  },
+  {
+    "id": "reparatii",
+    "icon": "🛠️",
+    "nume": "Reparații anvelope",
+    "descriere": "Reparăm rapid și eficient orice pană sau defect minor.",
+    "pret": "de la 60 lei"
+  }
+]

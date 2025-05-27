@@ -1,0 +1,14 @@
+{
+  "telefon": "+32 473 25 53 83",
+  "email": "contact@costelbanden.be",
+  "whatsapp": "+32 473 25 53 83",
+  "adresa": "Roeselare, West Flanders, België",
+  "program": {
+    "ro": "Disponibil de vineri seara de la 20:00 până duminică seara la 22:00",
+    "en": "Available from Friday evening 20:00 until Sunday evening 22:00",
+    "fr": "Disponible du vendredi soir 20h00 jusqu'au dimanche soir 22h00",
+    "nl": "Beschikbaar van vrijdagavond 20:00 tot zondagavond 22:00"
+  },
+  "pretUrgenta": "",
+  "instructiuniProgramari": ""
+}

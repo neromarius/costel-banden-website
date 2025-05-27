@@ -1,0 +1,102 @@
+{
+  "navbar": {
+    "home": "Home",
+    "services": "Diensten",
+    "appointments": "Afspraken",
+    "contact": "Contact",
+    "admin": "Admin"
+  },
+  "homepage": {
+    "title": "Costel Banden",
+    "subtitle": "Mobiele bandenservice",
+    "desc": "Reparatie, vervanging, balanceren en wisselen van banden bij u thuis of op kantoor. Snel, veilig en transparant geprijsd!",
+    "seo_title": "Mobiele bandenservice, banden, Roeselare",
+    "seo_subtitle": "Mobiele bandenservice, bandenwissel en reparatie in Roeselare en omgeving.",
+    "seo_desc": "Banden wisselen of repareren nodig? Costel Banden biedt snelle mobiele bandenservice in Roeselare en binnen een straal van 30 km. Wij komen altijd langs!"
+  },
+  "emergency": {
+    "text": "Nooddienst beschikbaar op aanvraag (binnen een straal van 30 km rond Roeselare)"
+  },
+  "services": {
+    "title": "Diensten",
+    "desc": "Al onze diensten zijn snel, veilig en transparant geprijsd.",
+    "list": [
+      {
+        "title": "Banden vulkaniseren",
+        "desc": "Montage, demontage, balanceren van banden voor auto's en bestelwagens.",
+        "price": "Vanaf 30 EURO"
+      },
+      {
+        "title": "Banden wisselen",
+        "desc": "Wisselen zomer/winterbanden, drukcontrole, vullen met stikstof.",
+        "price": "Vanaf 60 EURO"
+      },
+      {
+        "title": "Banden roteren",
+        "desc": "Roteren + balanceren van banden om ongelijkmatige slijtage te voorkomen.",
+        "price": "Vanaf 60 EURO"
+      },
+      {
+        "title": "Banden balanceren",
+        "desc": "Balanceren en controleren van de banden.",
+        "price": "Vanaf 30 EURO"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "desc": "Neem contact met ons op voor afspraken of vragen.",
+    "phone": "Telefoon",
+    "email": "Email", 
+    "whatsapp": "WhatsApp",
+    "address": "Adres",
+    "schedule": "Openingstijden",
+    "facebook": "Facebook",
+    "loading": "Contactgegevens laden..."
+  },
+  "admin": {
+    "title": "Admin",
+    "desc": "Beheer paneel."
+  },
+  "gallery": {
+    "images": [
+      {
+        "url": "/uploads/image1.jpg",
+        "caption": "Snelheid en professionaliteit – mobiele bandenservice direct bij u thuis!"
+      },
+      {
+        "url": "/uploads/image2.jpg",
+        "caption": "Noodinterventies voor uw veiligheid op de weg."
+      },
+      {
+        "url": "/uploads/image3.jpg",
+        "caption": "Moderne apparatuur en gekwalificeerd personeel – wij wisselen uw banden waar u maar wilt."
+      },
+      {
+        "url": "/uploads/image5.jpg",
+        "caption": "Kies voor premium diensten voor uw auto – snelheid, kwaliteit, transparantie."
+      },
+      {
+        "url": "/uploads/image7.jpg",
+        "caption": "Costel Banden – uw betrouwbare partner voor elke onverwachte situatie."
+      },
+      {
+        "url": "/uploads/image8.jpg",
+        "caption": "Weer of geen weer, wij komen overal in België!"
+      },
+      {
+        "url": "/uploads/image9.jpg",
+        "caption": "Gratis advies en tips voor het onderhoud van uw banden."
+      },
+      {
+        "url": "/uploads/image10.jpg",
+        "caption": "Reputatie opgebouwd door betrouwbaarheid en uitstekende resultaten."
+      },
+      {
+        "url": "/uploads/Image.jpg",
+        "caption": "Lokale onderneming met een groot hart – voor zorgeloze ritten!"
+      }
+    ]
+  },
+  "fast_service": "Snelle service | Online reserveren of via WhatsApp"
+}

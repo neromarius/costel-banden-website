@@ -1,0 +1,102 @@
+{
+  "navbar": {
+    "home": "Acasă",
+    "services": "Servicii",
+    "appointments": "Programări",
+    "contact": "Contact",
+    "admin": "Admin"
+  },
+  "homepage": {
+    "title": "Costel Banden",
+    "subtitle": "Serviciu mobil de anvelope",
+    "desc": "Reparații, înlocuire, echilibrare și rotire anvelope la tine acasă sau la birou. Rapid, sigur și la prețuri transparente!",
+    "seo_title": "Vulcanizare mobilă, anvelope, cauciucuri, Roeselare",
+    "seo_subtitle": "Serviciu mobil de vulcanizare, anvelope, cauciucuri în Roeselare și împrejurimi.",
+    "seo_desc": "Ai nevoie de vulcanizare, anvelope sau cauciucuri? Costel Banden oferă servicii rapide de vulcanizare mobilă în Roeselare și pe o rază de 30 km. Intervenim la orice oră!"
+  },
+  "emergency": {
+    "text": "Serviciul de urgență disponibil la cerere (în limita a 30 km de Roeselare)"
+  },
+  "services": {
+    "title": "Servicii",
+    "desc": "Toate serviciile noastre sunt rapide, sigure și la prețuri transparente.",
+    "list": [
+      {
+        "title": "Vulcanizare anvelope",
+        "desc": "Montaj, demontaj, echilibrare anvelope pentru autoturisme și utilitare.",
+        "price": "De la 30 EURO"
+      },
+      {
+        "title": "Schimb anvelope",
+        "desc": "Schimb anvelope vară/iarnă, verificare presiune, echilibrare.",
+        "price": "De la 60 EURO"
+      },
+      {
+        "title": "Rotire anvelope",
+        "desc": "Rotire + echilibrare anvelope pentru o uzura controlata.",
+        "price": "De la 60 EURO"
+      },
+      {
+        "title": "Echilibrare anvelope",
+        "desc": "Echilibrare și verificare roți.",
+        "price": "De la 30 EURO"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "desc": "Contactează-ne pentru programări sau întrebări.",
+    "phone": "Telefon",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "address": "Adresă",
+    "schedule": "Program",
+    "facebook": "Facebook",
+    "loading": "Se încarcă datele de contact..."
+  },
+  "admin": {
+    "title": "Admin",
+    "desc": "Panou administrare."
+  },
+  "gallery": {
+    "images": [
+      {
+        "url": "/uploads/image1.jpg",
+        "caption": "Rapiditate și profesionalism – service mobil de anvelope direct la tine acasă!"
+      },
+      {
+        "url": "/uploads/image2.jpg",
+        "caption": "Intervenții de urgență pentru siguranța ta pe drumuri."
+      },
+      {
+        "url": "/uploads/image3.jpg",
+        "caption": "Echipamente moderne și personal calificat – schimbăm anvelopele oriunde ai nevoie."
+      },
+      {
+        "url": "/uploads/image5.jpg",
+        "caption": "Alege servicii premium pentru mașina ta – promptitudine, calitate, transparență."
+      },
+      {
+        "url": "/uploads/image7.jpg",
+        "caption": "Costel Banden – partenerul tău de încredere pentru orice situație neprevăzută."
+      },
+      {
+        "url": "/uploads/image8.jpg",
+        "caption": "Fie ploaie, fie soare, nu te lasam la greu !"
+      },
+      {
+        "url": "/uploads/image9.jpg",
+        "caption": "Consultanță gratuită și sfaturi pentru întreținerea anvelopelor."
+      },
+      {
+        "url": "/uploads/image10.jpg",
+        "caption": "Reputație construită pe seriozitate și rezultate excelente."
+      },
+      {
+        "url": "/uploads/Image.jpg",
+        "caption": "Afacere locală cu suflet mare – pentru drumuri fără griji!"
+      }
+    ]
+  },
+  "fast_service": "Servicii rapide | Programare online sau pe WhatsApp"
+}
