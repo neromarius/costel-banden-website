@@ -27,7 +27,7 @@ export default async function LangLayout(props: {
       {/* Nu folosi <html> sau <body> aici! */}
       <Head>
         <meta name="keywords" content="vulcanizare mobilă, schimb anvelope, service cauciucuri, Roeselare, dépannage pneus, bandenservice, tyre service, rapid, programare online, WhatsApp, West Flanders, mobile tyre fitting, cheap tyres, quick tyre, local tyre service, professional tyre service, echilibrare roți, anvelope iarnă/vară, service auto mobil, urgent tyre change" />
-        <meta property="og:title" content="Vulcanizare mobilă Roeselare | Service anvelope rapid | Costel Banden" />
+        <meta property="og:title" content="Vulcanizare mobilă Roeselare | Service anvelope | Costel Banden" />
         <meta property="og:description" content="Service mobil anvelope, schimb cauciucuri, intervenții rapide la domiciliu în Roeselare și West Flanders. Programează online sau pe WhatsApp. Prețuri transparente, intervenții non-stop." />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="ro_RO" />
@@ -38,7 +38,7 @@ export default async function LangLayout(props: {
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Vulcanizare mobilă Roeselare | Costel Banden" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Vulcanizare mobilă Roeselare | Service anvelope rapid | Costel Banden" />
+        <meta name="twitter:title" content="Vulcanizare mobilă Roeselare | Service anvelope | Costel Banden" />
         <meta name="twitter:description" content="Service mobil anvelope, schimb cauciucuri, intervenții rapide la domiciliu în Roeselare și West Flanders." />
         <meta name="twitter:image" content="https://costelbanden.be/og-image.jpg" />
         <link rel="alternate" href="https://costelbanden.be/ro" hrefLang="ro" />
