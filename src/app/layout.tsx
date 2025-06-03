@@ -120,7 +120,7 @@ export default function RootLayout({
             "image": "https://costelbanden.be/og-image.jpg",
             "url": "https://costelbanden.be/",
             "telephone": "+32491234567",
-            "email": "contact@costelbanden.be",
+            "email": "Costelbanden@gmail.com",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "Roeselare, West Flanders",

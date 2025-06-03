@@ -131,7 +131,7 @@ npm run start
 ## 📞 Contact Information
 
 - **Phone**: +32 473 25 53 83
-- **Email**: contact@costelbanden.be
+- **Email**: Costelbanden@gmail.com
 - **WhatsApp**: +32 473 25 53 83
 - **Location**: Roeselare, West Flanders, Belgium
 - **Schedule**: Friday 20:00 - Sunday 22:00
