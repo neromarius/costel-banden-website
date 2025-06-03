@@ -210,6 +210,11 @@ body {
 .overlay-backdrop {
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(4px);
+  pointer-events: auto;
+}
+
+.overlay-backdrop > * {
+  pointer-events: auto;
 }
 
 /* Enhanced cookie banner styling */

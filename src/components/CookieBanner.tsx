@@ -86,34 +86,9 @@ const getCurrentLanguage = (pathname: string): string => {
   return 'nl'; // Default to Dutch
 };
 
-// Get localized paths for privacy/cookie policy
-const getLocalizedPaths = (lang: string) => {
-  // For now, point to existing pages that work
-  const paths = {
-    privacy: {
-      ro: '/privacybeleid',
-      en: '/privacybeleid',
-      fr: '/privacybeleid',
-      nl: '/privacybeleid'
-    },
-    cookie: {
-      ro: '/cookiebeleid',
-      en: '/cookiebeleid', 
-      fr: '/cookiebeleid',
-      nl: '/cookiebeleid'
-    }
-  };
-
-  return {
-    privacy: paths.privacy[lang as keyof typeof paths.privacy] || paths.privacy.nl,
-    cookie: paths.cookie[lang as keyof typeof paths.cookie] || paths.cookie.nl
-  };
-};
-
 export default function CookieBanner({ onConsent }: { onConsent?: (prefs: CookiePrefs) => void }) {
   const pathname = usePathname();
   const currentLang = getCurrentLanguage(pathname) as keyof typeof translations;
-  const localizedPaths = getLocalizedPaths(currentLang);
   
   const [visible, setVisible] = useState(false);
   const [prefs, setPrefs] = useState<CookiePrefs>(defaultPrefs);
@@ -121,86 +96,118 @@ export default function CookieBanner({ onConsent }: { onConsent?: (prefs: Cookie
 
   useEffect(() => {
     const saved = localStorage.getItem(COOKIE_KEY);
-    if (!saved) setVisible(true);
+    if (!saved) {
+      setVisible(true);
+    }
   }, []);
 
   const savePrefs = (newPrefs: CookiePrefs) => {
-    localStorage.setItem(COOKIE_KEY, JSON.stringify(newPrefs));
-    setVisible(false);
-    if (onConsent) onConsent(newPrefs);
+    try {
+      localStorage.setItem(COOKIE_KEY, JSON.stringify(newPrefs));
+      setVisible(false);
+      if (onConsent) onConsent(newPrefs);
+      
+      // Force a small delay to ensure state updates properly
+      setTimeout(() => {
+        console.log('Cookie preferences saved:', newPrefs);
+      }, 100);
+    } catch (error) {
+      console.error('Error saving cookie preferences:', error);
+    }
   };
 
   const handleAccept = () => {
+    console.log('Accept clicked');
     savePrefs({ ...prefs, analytics: true, marketing: false });
   };
 
   const handleReject = () => {
+    console.log('Reject clicked');
     savePrefs({ ...prefs, analytics: false, marketing: false });
   };
 
   const handleCustomize = () => setCustomize(true);
 
   // Don't render if not visible
-  if (!visible) return null;
+  if (!visible) {
+    console.log('Cookie banner not visible');
+    return null;
+  }
 
   const t = translations[currentLang] || translations.nl;
 
   return (
-    <div className="fixed inset-0 z-[1000] flex items-end md:items-center justify-center overlay-backdrop">
-      <div className="cookie-banner rounded-2xl max-w-md w-full m-4 p-6 flex flex-col gap-4">
-        <h2 className="text-xl font-bold text-blue-800 text-contrast">{t.title}</h2>
-        <p className="text-blue-900 text-base leading-relaxed text-contrast">
+    <div 
+      className="fixed inset-0 z-[9999] flex items-center justify-center" 
+      style={{ 
+        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+        backdropFilter: 'blur(4px)'
+      }}
+    >
+      <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full m-4 p-6 border border-gray-200 relative z-[10000]">
+        <h2 className="text-xl font-bold text-blue-800 mb-3">{t.title}</h2>
+        <p className="text-blue-900 text-base leading-relaxed mb-4">
           {t.description}
         </p>
-        <div className="text-sm text-blue-700">
-          <Link href={localizedPaths.privacy} className="underline hover:text-blue-800 transition-colors">
+        <div className="text-sm text-blue-700 mb-4">
+          <Link href="/privacybeleid" className="underline hover:text-blue-800 transition-colors">
             {t.privacy_policy}
           </Link>
           {' | '}
-          <Link href={localizedPaths.cookie} className="underline hover:text-blue-800 transition-colors">
+          <Link href="/cookiebeleid" className="underline hover:text-blue-800 transition-colors">
             {t.cookie_policy}
           </Link>
         </div>
         
         {customize ? (
-          <div className="flex flex-col gap-4">
-            <div className="space-y-4">
-              <label className="flex items-start gap-3 cursor-pointer p-3 bg-gray-50 rounded-lg">
+          <div className="space-y-4">
+            <div className="space-y-3">
+              <label className="flex items-start gap-3 p-3 bg-gray-50 rounded-lg">
                 <input 
                   type="checkbox" 
                   checked 
                   disabled 
-                  className="mt-1 w-4 h-4 text-green-600 bg-green-100 border-green-300 rounded focus:ring-green-500 cursor-not-allowed"
+                  style={{
+                    width: '16px',
+                    height: '16px',
+                    marginTop: '2px',
+                    accentColor: '#10b981'
+                  }}
                 />
-                <div className="flex-1">
+                <div>
                   <span className="font-semibold text-green-700 block">{t.essential_cookies}</span>
                   <p className="text-sm text-gray-600 mt-1">{t.essential_description}</p>
                 </div>
               </label>
               
-              <label className="flex items-start gap-3 cursor-pointer p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+              <label className="flex items-start gap-3 p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer">
                 <input 
                   type="checkbox" 
                   checked={prefs.analytics} 
                   onChange={e => setPrefs(p => ({ ...p, analytics: e.target.checked }))} 
-                  className="mt-1 w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 cursor-pointer"
+                  style={{
+                    width: '16px',
+                    height: '16px',
+                    marginTop: '2px',
+                    accentColor: '#3b82f6'
+                  }}
                 />
-                <div className="flex-1">
+                <div>
                   <span className="block font-medium">Google Search Console</span>
                   <p className="text-sm text-gray-600 mt-1">{t.analytics_description}</p>
                 </div>
               </label>
             </div>
             
-            <div className="flex gap-2 mt-4">
+            <div className="flex gap-2 pt-4">
               <button 
-                className="btn-primary flex-1 px-4 py-2 rounded-lg font-semibold transition-colors" 
+                className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded-lg transition-colors" 
                 onClick={() => savePrefs(prefs)}
               >
                 {t.save}
               </button>
               <button 
-                className="bg-gray-300 text-gray-800 font-semibold px-4 py-2 rounded-lg hover:bg-gray-400 transition-colors" 
+                className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold px-4 py-2 rounded-lg transition-colors" 
                 onClick={() => setCustomize(false)}
               >
                 {t.back}
@@ -208,23 +215,23 @@ export default function CookieBanner({ onConsent }: { onConsent?: (prefs: Cookie
             </div>
           </div>
         ) : (
-          <div className="flex flex-col gap-3">
+          <div className="space-y-3">
             <div className="flex gap-2">
               <button 
-                className="btn-primary flex-1 px-4 py-2 rounded-lg font-semibold transition-colors" 
+                className="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold px-4 py-2 rounded-lg transition-colors" 
                 onClick={handleAccept}
               >
                 {t.accept}
               </button>
               <button 
-                className="btn-secondary flex-1 px-4 py-2 rounded-lg font-semibold transition-colors" 
+                className="flex-1 bg-red-500 hover:bg-red-600 text-white font-semibold px-4 py-2 rounded-lg transition-colors" 
                 onClick={handleReject}
               >
                 {t.reject}
               </button>
             </div>
             <button 
-              className="bg-white border-2 border-blue-600 text-blue-700 font-semibold px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors" 
+              className="w-full bg-white border-2 border-blue-600 text-blue-700 font-semibold px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors" 
               onClick={handleCustomize}
             >
               {t.customize}
