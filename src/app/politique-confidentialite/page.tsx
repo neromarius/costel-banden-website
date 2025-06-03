@@ -1,14 +1,29 @@
-import React from 'react';
+'use client';
 
-export const metadata = {
-  title: 'Politique de Confidentialité - Costel Banden',
-  description: 'Politique de confidentialité de Costel Banden - Vulcanisation mobile Roulers'
-};
+import React from 'react';
+import Link from 'next/link';
 
 export default function PrivacyPolicyFrPage() {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-white to-blue-200">
+      {/* Simple Navigation */}
+      <nav className="w-full max-w-3xl mx-auto flex flex-col items-center justify-center gap-2 py-4 px-4">
+        <div className="w-full flex flex-row items-center justify-center mb-4 gap-2">
+          <Link href="/" className="flex items-center flex-shrink-0" aria-label="Accueil Costel Banden">
+            <img src="/logo-costelbanden.svg" alt="Logo CB" style={{ maxWidth: '96px', width: '96px', minWidth: '96px', height: 'auto' }} />
+          </Link>
+          <span className="text-2xl font-extrabold text-blue-900 flex-1 text-center tracking-wider">Costel Banden</span>
+        </div>
+        
+        <div className="flex gap-2 text-sm flex-wrap justify-center">
+          <Link href="/" className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Accueil</Link>
+          <Link href="/privacybeleid" className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Privacy (NL)</Link>
+          <Link href="/politique-confidentialite" className="px-4 py-2 bg-blue-800 text-white rounded-lg">Confidentialité</Link>
+        </div>
+      </nav>
+
+      {/* Content */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
         <div className="bg-white rounded-lg shadow-lg p-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-6">Politique de Confidentialité - Costel Banden</h1>
           <p className="text-sm text-gray-600 mb-8"><strong>Dernière mise à jour :</strong> 3 juin 2025</p>
