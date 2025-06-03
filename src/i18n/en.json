@@ -5,5 +5,19 @@
   "contact": "Contact",
   "emergency": "Emergency service",
   "urgent_price": "Urgent price",
-  "choose_language": "Choose language"
+  "choose_language": "Choose language",
+  "cookies": {
+    "title": "🍪 Cookies & Privacy",
+    "description": "We only use essential cookies and Google Search Console for website statistics. By continuing to browse, you agree to our cookie policy.",
+    "privacy_policy": "Privacy Policy",
+    "cookie_policy": "Cookie Policy",
+    "essential_cookies": "Essential cookies (required)",
+    "essential_description": "For website functionality and your cookie choice.",
+    "analytics_description": "For website statistics and performance (anonymous).",
+    "accept": "Accept",
+    "reject": "Reject",
+    "customize": "Customize preferences",
+    "save": "Save",
+    "back": "Back"
+  }
 }

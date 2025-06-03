@@ -5,5 +5,19 @@
   "contact": "Contact",
   "emergency": "Service d'urgence",
   "urgent_price": "Prix urgent",
-  "choose_language": "Choisir la langue"
+  "choose_language": "Choisir la langue",
+  "cookies": {
+    "title": "🍪 Cookies et Confidentialité",
+    "description": "Nous utilisons uniquement des cookies essentiels et Google Search Console pour les statistiques du site. En continuant à naviguer, vous acceptez notre politique de cookies.",
+    "privacy_policy": "Politique de confidentialité",
+    "cookie_policy": "Politique des cookies",
+    "essential_cookies": "Cookies essentiels (obligatoires)",
+    "essential_description": "Pour la fonctionnalité du site et votre choix de cookies.",
+    "analytics_description": "Pour les statistiques et performances du site (anonyme).",
+    "accept": "Accepter",
+    "reject": "Refuser",
+    "customize": "Personnaliser les préférences",
+    "save": "Sauvegarder",
+    "back": "Retour"
+  }
 }

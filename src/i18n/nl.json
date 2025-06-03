@@ -5,5 +5,19 @@
   "contact": "Contact",
   "emergency": "Nooddienst",
   "urgent_price": "Spoedprijs",
-  "choose_language": "Kies taal"
+  "choose_language": "Kies taal",
+  "cookies": {
+    "title": "🍪 Cookies & Privacy",
+    "description": "Wij gebruiken alleen essentiële cookies en Google Search Console voor websitestatistieken. Door verder te surfen, ga je akkoord met ons cookiebeleid.",
+    "privacy_policy": "Privacybeleid",
+    "cookie_policy": "Cookiebeleid",
+    "essential_cookies": "Essentiële cookies (verplicht)",
+    "essential_description": "Voor website functionaliteit en uw cookiekeuze.",
+    "analytics_description": "Voor website statistieken en prestaties (anoniem).",
+    "accept": "Accepteren",
+    "reject": "Weigeren",
+    "customize": "Voorkeuren aanpassen",
+    "save": "Opslaan",
+    "back": "Terug"
+  }
 }

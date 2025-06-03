@@ -5,5 +5,19 @@
   "contact": "Contact",
   "emergency": "Serviciu de urgență",
   "urgent_price": "Preț urgență",
-  "choose_language": "Alege limba"
+  "choose_language": "Alege limba",
+  "cookies": {
+    "title": "🍪 Cookie-uri și Confidențialitate",
+    "description": "Utilizăm doar cookie-uri esențiale și Google Search Console pentru statistici website. Continuând navigarea, sunteți de acord cu politica noastră de cookie-uri.",
+    "privacy_policy": "Politica de confidențialitate",
+    "cookie_policy": "Politica cookie-uri",
+    "essential_cookies": "Cookie-uri esențiale (obligatorii)",
+    "essential_description": "Pentru funcționalitatea website-ului și alegerea cookie-urilor.",
+    "analytics_description": "Pentru statistici și performanța website-ului (anonim).",
+    "accept": "Acceptă",
+    "reject": "Respinge",
+    "customize": "Personalizează preferințele",
+    "save": "Salvează",
+    "back": "Înapoi"
+  }
 }
