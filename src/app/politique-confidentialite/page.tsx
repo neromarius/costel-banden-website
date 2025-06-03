@@ -28,7 +28,7 @@ export default function PrivacyPolicyFrPage() {
           <h1 className="text-3xl font-bold text-gray-900 mb-6">Politique de Confidentialité - Costel Banden</h1>
           <p className="text-sm text-gray-600 mb-8"><strong>Dernière mise à jour :</strong> 3 juin 2025</p>
 
-          <div className="space-y-8">
+          <div className="space-y-8 text-gray-800">
             <section>
               <h2 className="text-2xl font-semibold text-gray-800 mb-4">1. Qui sommes-nous ?</h2>
               <div className="bg-blue-50 p-4 rounded-lg">

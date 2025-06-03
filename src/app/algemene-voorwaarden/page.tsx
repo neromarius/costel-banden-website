@@ -29,10 +29,10 @@ export default function TermsPage() {
           <h1 className="text-3xl font-bold text-gray-900 mb-6">Algemene Voorwaarden - Costel Banden</h1>
           <p className="text-sm text-gray-600 mb-8"><strong>Laatst bijgewerkt:</strong> 3 juni 2025</p>
 
-          <div className="space-y-8">
+          <div className="space-y-8 text-gray-800">
             <section>
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">1. Bedrijfsgegevens</h2>
-              <div className="bg-blue-50 p-4 rounded-lg">
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Bedrijfsgegevens</h2>
+              <div className="bg-blue-50 p-4 rounded-lg text-gray-900">
                 <p><strong>Bedrijfsnaam:</strong> Petrof Costel</p>
                 <p><strong>Adres:</strong> Hoogleedsesteenweg 4 bus 1, 8800 Roeselare</p>
                 <p><strong>BCE/KBO nummer:</strong> BE 0787161037</p>
