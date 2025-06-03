@@ -30,7 +30,7 @@ export default function CookieBanner({ onConsent }: { onConsent?: (prefs: Cookie
   };
 
   const handleAccept = () => {
-    savePrefs({ ...prefs, analytics: true, marketing: true });
+    savePrefs({ ...prefs, analytics: true, marketing: false }); // Doar analytics pentru Google Search Console
   };
 
   const handleReject = () => {
@@ -44,45 +44,74 @@ export default function CookieBanner({ onConsent }: { onConsent?: (prefs: Cookie
   return (
     <div className="fixed inset-0 z-[1000] flex items-end md:items-center justify-center bg-black/40">
       <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full m-4 p-6 flex flex-col gap-4 border border-gray-200 animate-fade-in">
-        <h2 className="text-xl font-bold text-blue-800">Cookie-uri & confidențialitate</h2>
+        <h2 className="text-xl font-bold text-blue-800">🍪 Cookies & Privacy</h2>
         <p className="text-blue-900 text-base">
-          Folosim cookie-uri pentru a îmbunătăți experiența pe site, a analiza traficul și a personaliza conținutul. Poți accepta toate cookie-urile, respinge sau personaliza preferințele. Pentru detalii, citește <Link href="/politica-cookie/" className="underline text-blue-700">politica de cookie-uri</Link>.
+          Wij gebruiken alleen essentiële cookies en Google Search Console voor websitestatistieken. 
+          Door verder te surfen, ga je akkoord met ons cookiebeleid.
         </p>
+        <div className="text-sm text-blue-700">
+          <Link href="/privacybeleid" className="underline hover:text-blue-800">Privacybeleid</Link>
+          {' | '}
+          <Link href="/cookiebeleid" className="underline hover:text-blue-800">Cookiebeleid</Link>
+        </div>
+        
         {customize ? (
-          <div className="flex flex-col gap-2">
-            <label className="flex items-center gap-2">
-              <input type="checkbox" checked disabled />
-              <span className="font-semibold">Necesare (obligatorii)</span>
-            </label>
-            <label className="flex items-center gap-2">
-              <input type="checkbox" checked={prefs.analytics} onChange={e => setPrefs(p => ({ ...p, analytics: e.target.checked }))} />
-              <span>Analiză trafic (anonim)</span>
-            </label>
-            <label className="flex items-center gap-2">
-              <input type="checkbox" checked={prefs.marketing} onChange={e => setPrefs(p => ({ ...p, marketing: e.target.checked }))} />
-              <span>Marketing & remarketing</span>
-            </label>
-            <div className="flex gap-2 mt-2">
-              <button className="bg-blue-600 text-white font-bold px-4 py-2 rounded-lg shadow hover:bg-blue-700" onClick={() => savePrefs(prefs)}>
-                Salvează preferințele
+          <div className="flex flex-col gap-3">
+            <div className="space-y-2">
+              <label className="flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" checked disabled className="cursor-not-allowed" />
+                <span className="font-semibold text-green-700">Essentiële cookies (verplicht)</span>
+              </label>
+              <p className="text-sm text-gray-600 ml-6">Voor website functionaliteit en uw cookiekeuze.</p>
+              
+              <label className="flex items-center gap-2 cursor-pointer">
+                <input 
+                  type="checkbox" 
+                  checked={prefs.analytics} 
+                  onChange={e => setPrefs(p => ({ ...p, analytics: e.target.checked }))} 
+                  className="cursor-pointer"
+                />
+                <span>Google Search Console</span>
+              </label>
+              <p className="text-sm text-gray-600 ml-6">Voor website statistieken en prestaties (anoniem).</p>
+            </div>
+            
+            <div className="flex gap-2 mt-4">
+              <button 
+                className="bg-green-600 text-white font-semibold px-4 py-2 rounded-lg shadow hover:bg-green-700 transition-colors flex-1" 
+                onClick={() => savePrefs(prefs)}
+              >
+                Opslaan
               </button>
-              <button className="bg-gray-300 text-gray-800 font-bold px-4 py-2 rounded-lg hover:bg-gray-400" onClick={() => setCustomize(false)}>
-                Înapoi
+              <button 
+                className="bg-gray-300 text-gray-800 font-semibold px-4 py-2 rounded-lg hover:bg-gray-400 transition-colors" 
+                onClick={() => setCustomize(false)}
+              >
+                Terug
               </button>
             </div>
           </div>
         ) : (
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-3">
             <div className="flex gap-2">
-              <button className="bg-blue-600 text-white font-bold px-4 py-2 rounded-lg shadow hover:bg-blue-700 flex-1" onClick={handleAccept}>
-                Acceptă toate
+              <button 
+                className="bg-green-600 text-white font-semibold px-4 py-2 rounded-lg shadow hover:bg-green-700 transition-colors flex-1" 
+                onClick={handleAccept}
+              >
+                Accepteren
               </button>
-              <button className="bg-gray-300 text-gray-800 font-bold px-4 py-2 rounded-lg hover:bg-gray-400 flex-1" onClick={handleReject}>
-                Respinge
+              <button 
+                className="bg-red-500 text-white font-semibold px-4 py-2 rounded-lg hover:bg-red-600 transition-colors flex-1" 
+                onClick={handleReject}
+              >
+                Weigeren
               </button>
             </div>
-            <button className="bg-white border border-blue-600 text-blue-700 font-bold px-4 py-2 rounded-lg mt-2 hover:bg-blue-50" onClick={handleCustomize}>
-              Customizează
+            <button 
+              className="bg-white border border-blue-600 text-blue-700 font-semibold px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors" 
+              onClick={handleCustomize}
+            >
+              Voorkeuren aanpassen
             </button>
           </div>
         )}

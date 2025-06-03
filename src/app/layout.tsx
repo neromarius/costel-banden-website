@@ -4,6 +4,7 @@ import "./globals.css";
 import WhatsAppButton from "../components/WhatsAppButton";
 import CookieBanner from "../components/CookieBanner";
 import UmamiScript from "../components/UmamiScript";
+import Footer from "../components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -191,6 +192,7 @@ export default function RootLayout({
         <main className="pt-4 md:pt-10 px-2 md:px-0 max-w-3xl mx-auto w-full">
           {children}
         </main>
+        <Footer />
         <WhatsAppButton />
         <CookieBanner />
         {/* Eliminat EmergencyBannerDynamic pentru a preveni suprapunerea și flickerul bannerului de urgență */}
