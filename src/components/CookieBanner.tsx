@@ -14,37 +14,64 @@ const defaultPrefs = {
 
 type CookiePrefs = typeof defaultPrefs;
 
-// Translation function
-const useTranslations = (lang: string) => {
-  const [translations, setTranslations] = useState<any>({});
-
-  useEffect(() => {
-    const loadTranslations = async () => {
-      try {
-        const response = await fetch(`/api/translations/${lang}`);
-        if (!response.ok) {
-          // Fallback to importing directly
-          const module = await import(`../i18n/${lang}.json`);
-          setTranslations(module.default);
-        } else {
-          const data = await response.json();
-          setTranslations(data);
-        }
-      } catch (error) {
-        // Fallback to Dutch if translation fails
-        try {
-          const module = await import(`../i18n/nl.json`);
-          setTranslations(module.default);
-        } catch (fallbackError) {
-          console.error('Failed to load translations:', fallbackError);
-        }
-      }
-    };
-
-    loadTranslations();
-  }, [lang]);
-
-  return translations;
+// Static translations embedded in component
+const translations = {
+  ro: {
+    title: "🍪 Cookie-uri și Confidențialitate",
+    description: "Utilizăm doar cookie-uri esențiale și Google Search Console pentru statistici website. Continuând navigarea, sunteți de acord cu politica noastră de cookie-uri.",
+    privacy_policy: "Politica de confidențialitate",
+    cookie_policy: "Politica cookie-uri",
+    essential_cookies: "Cookie-uri esențiale (obligatorii)",
+    essential_description: "Pentru funcționalitatea website-ului și alegerea cookie-urilor.",
+    analytics_description: "Pentru statistici și performanța website-ului (anonim).",
+    accept: "Acceptă",
+    reject: "Respinge",
+    customize: "Personalizează preferințele",
+    save: "Salvează",
+    back: "Înapoi"
+  },
+  en: {
+    title: "🍪 Cookies & Privacy",
+    description: "We only use essential cookies and Google Search Console for website statistics. By continuing to browse, you agree to our cookie policy.",
+    privacy_policy: "Privacy Policy",
+    cookie_policy: "Cookie Policy",
+    essential_cookies: "Essential cookies (required)",
+    essential_description: "For website functionality and your cookie choice.",
+    analytics_description: "For website statistics and performance (anonymous).",
+    accept: "Accept",
+    reject: "Reject",
+    customize: "Customize preferences",
+    save: "Save",
+    back: "Back"
+  },
+  fr: {
+    title: "🍪 Cookies et Confidentialité",
+    description: "Nous utilisons uniquement des cookies essentiels et Google Search Console pour les statistiques du site. En continuant à naviguer, vous acceptez notre politique de cookies.",
+    privacy_policy: "Politique de confidentialité",
+    cookie_policy: "Politique des cookies",
+    essential_cookies: "Cookies essentiels (obligatoires)",
+    essential_description: "Pour la fonctionnalité du site et votre choix de cookies.",
+    analytics_description: "Pour les statistiques et performances du site (anonyme).",
+    accept: "Accepter",
+    reject: "Refuser",
+    customize: "Personnaliser les préférences",
+    save: "Sauvegarder",
+    back: "Retour"
+  },
+  nl: {
+    title: "🍪 Cookies & Privacy",
+    description: "Wij gebruiken alleen essentiële cookies en Google Search Console voor websitestatistieken. Door verder te surfen, ga je akkoord met ons cookiebeleid.",
+    privacy_policy: "Privacybeleid",
+    cookie_policy: "Cookiebeleid",
+    essential_cookies: "Essentiële cookies (verplicht)",
+    essential_description: "Voor website functionaliteit en uw cookiekeuze.",
+    analytics_description: "Voor website statistieken en prestaties (anoniem).",
+    accept: "Accepteren",
+    reject: "Weigeren",
+    customize: "Voorkeuren aanpassen",
+    save: "Opslaan",
+    back: "Terug"
+  }
 };
 
 // Get current language from pathname
@@ -61,19 +88,18 @@ const getCurrentLanguage = (pathname: string): string => {
 
 // Get localized paths for privacy/cookie policy
 const getLocalizedPaths = (lang: string) => {
-  const basePath = lang === 'nl' ? '' : `/${lang}`;
-  
+  // For now, point to existing pages that work
   const paths = {
     privacy: {
-      ro: `${basePath}/politica-confidentialitate`,
-      en: `${basePath}/privacy-policy`,
-      fr: `${basePath}/politique-confidentialite`,
+      ro: '/privacybeleid',
+      en: '/privacybeleid',
+      fr: '/privacybeleid',
       nl: '/privacybeleid'
     },
     cookie: {
-      ro: `${basePath}/politica-cookie`,
-      en: `${basePath}/cookie-policy`,
-      fr: `${basePath}/politique-cookies`,
+      ro: '/cookiebeleid',
+      en: '/cookiebeleid', 
+      fr: '/cookiebeleid',
       nl: '/cookiebeleid'
     }
   };
@@ -86,8 +112,7 @@ const getLocalizedPaths = (lang: string) => {
 
 export default function CookieBanner({ onConsent }: { onConsent?: (prefs: CookiePrefs) => void }) {
   const pathname = usePathname();
-  const currentLang = getCurrentLanguage(pathname);
-  const translations = useTranslations(currentLang);
+  const currentLang = getCurrentLanguage(pathname) as keyof typeof translations;
   const localizedPaths = getLocalizedPaths(currentLang);
   
   const [visible, setVisible] = useState(false);
@@ -115,16 +140,16 @@ export default function CookieBanner({ onConsent }: { onConsent?: (prefs: Cookie
 
   const handleCustomize = () => setCustomize(true);
 
-  // Don't render if not visible or translations not loaded
-  if (!visible || !translations.cookies) return null;
+  // Don't render if not visible
+  if (!visible) return null;
 
-  const t = translations.cookies;
+  const t = translations[currentLang] || translations.nl;
 
   return (
-    <div className="fixed inset-0 z-[1000] flex items-end md:items-center justify-center bg-black/50 backdrop-blur-sm">
-      <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full m-4 p-6 flex flex-col gap-4 border border-gray-200 animate-fade-in">
-        <h2 className="text-xl font-bold text-blue-800">{t.title}</h2>
-        <p className="text-blue-900 text-base leading-relaxed">
+    <div className="fixed inset-0 z-[1000] flex items-end md:items-center justify-center overlay-backdrop">
+      <div className="cookie-banner rounded-2xl max-w-md w-full m-4 p-6 flex flex-col gap-4">
+        <h2 className="text-xl font-bold text-blue-800 text-contrast">{t.title}</h2>
+        <p className="text-blue-900 text-base leading-relaxed text-contrast">
           {t.description}
         </p>
         <div className="text-sm text-blue-700">
@@ -138,25 +163,30 @@ export default function CookieBanner({ onConsent }: { onConsent?: (prefs: Cookie
         </div>
         
         {customize ? (
-          <div className="flex flex-col gap-3">
-            <div className="space-y-3">
-              <label className="flex items-start gap-3 cursor-pointer">
-                <input type="checkbox" checked disabled className="cursor-not-allowed mt-1" />
-                <div>
+          <div className="flex flex-col gap-4">
+            <div className="space-y-4">
+              <label className="flex items-start gap-3 cursor-pointer p-3 bg-gray-50 rounded-lg">
+                <input 
+                  type="checkbox" 
+                  checked 
+                  disabled 
+                  className="mt-1 w-4 h-4 text-green-600 bg-green-100 border-green-300 rounded focus:ring-green-500 cursor-not-allowed"
+                />
+                <div className="flex-1">
                   <span className="font-semibold text-green-700 block">{t.essential_cookies}</span>
                   <p className="text-sm text-gray-600 mt-1">{t.essential_description}</p>
                 </div>
               </label>
               
-              <label className="flex items-start gap-3 cursor-pointer">
+              <label className="flex items-start gap-3 cursor-pointer p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                 <input 
                   type="checkbox" 
                   checked={prefs.analytics} 
                   onChange={e => setPrefs(p => ({ ...p, analytics: e.target.checked }))} 
-                  className="cursor-pointer mt-1"
+                  className="mt-1 w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 cursor-pointer"
                 />
-                <div>
-                  <span className="block">Google Search Console</span>
+                <div className="flex-1">
+                  <span className="block font-medium">Google Search Console</span>
                   <p className="text-sm text-gray-600 mt-1">{t.analytics_description}</p>
                 </div>
               </label>
@@ -164,7 +194,7 @@ export default function CookieBanner({ onConsent }: { onConsent?: (prefs: Cookie
             
             <div className="flex gap-2 mt-4">
               <button 
-                className="bg-green-600 text-white font-semibold px-4 py-2 rounded-lg shadow hover:bg-green-700 transition-colors flex-1" 
+                className="btn-primary flex-1 px-4 py-2 rounded-lg font-semibold transition-colors" 
                 onClick={() => savePrefs(prefs)}
               >
                 {t.save}
@@ -181,20 +211,20 @@ export default function CookieBanner({ onConsent }: { onConsent?: (prefs: Cookie
           <div className="flex flex-col gap-3">
             <div className="flex gap-2">
               <button 
-                className="bg-green-600 text-white font-semibold px-4 py-2 rounded-lg shadow hover:bg-green-700 transition-colors flex-1" 
+                className="btn-primary flex-1 px-4 py-2 rounded-lg font-semibold transition-colors" 
                 onClick={handleAccept}
               >
                 {t.accept}
               </button>
               <button 
-                className="bg-red-500 text-white font-semibold px-4 py-2 rounded-lg hover:bg-red-600 transition-colors flex-1" 
+                className="btn-secondary flex-1 px-4 py-2 rounded-lg font-semibold transition-colors" 
                 onClick={handleReject}
               >
                 {t.reject}
               </button>
             </div>
             <button 
-              className="bg-white border border-blue-600 text-blue-700 font-semibold px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors" 
+              className="bg-white border-2 border-blue-600 text-blue-700 font-semibold px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors" 
               onClick={handleCustomize}
             >
               {t.customize}
